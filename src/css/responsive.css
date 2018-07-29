@@ -28,15 +28,19 @@
   }
 
   .filter-options {
-    height: 90px;
+    height: 100%;
+    display: block;
+    text-align: center
   }
 
   .filter-options h2 {
     padding-top: 8px;
+    display: block
+
   }
 
   #restaurants-list li {
-    width: 70%;
+    width: 100%;
   }
 
   .inside #map-container {
@@ -86,7 +90,7 @@
   }
 
   #restaurant-container {
-    padding: 10px 0 0 20px;
+    padding-top: 10px;
   }
 
   ul#reviews-list {
@@ -104,5 +108,11 @@
   .inside #footer {
     position: relative;
     padding: 25px 0;
+  }
+}
+@media (max-width: 1091px) and (min-width: 641px) {
+  #breadcrumb {
+  width: 100%;
+  text-align: center;
   }
 }

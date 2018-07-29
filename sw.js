@@ -66,6 +66,12 @@ self.addEventListener('fetch', event => {
     : event.request;
 
   event.respondWith(
-    caches.match(request).then(response => response || fetch(request)),
+    caches.match(event.request).then(response => {
+      if (response) {
+        // console.log("[ServiceWorker] Found in cache ", event.request.url);
+        return response;
+      }
+      return fetch(event.request);
+    }),
   );
 });
